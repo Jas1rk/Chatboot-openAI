@@ -1,9 +1,10 @@
 import React from 'react'
+import './Header.css'
 
 const Header = () => {
   return (
-    <div>
-      <h3>Chat boot</h3>
+    <div className='header-content'>
+      <h2>Chat boot</h2>
     </div>
   )
 }
