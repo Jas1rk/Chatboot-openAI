@@ -11,8 +11,6 @@ const chatSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-
-const Chat = mongoose.model("Chat", chatSchema, "messages", {
-  capped: { size: 1024 * 1024, max: 1000 },
-});
+chatSchema.set("capped", { size: 1024 * 1024, max: 1000 });
+const Chat = mongoose.model("Chat", chatSchema);
 module.exports = Chat;
